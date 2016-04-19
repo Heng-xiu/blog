@@ -1,0 +1,36 @@
+language: node_js
+node_js:
+    - "0.12"
+
+# 指定分支
+branches:
+  only:
+  - master #这个分支应当使用自己的 Dev repo
+
+#将 node_modules 缓存起来，这样可以节省部署的时间
+cache:
+  directories:
+    - node_modules
+
+before_install:
+    - npm install -g hexo
+
+install:
+    - npm install
+
+before_script:
+    - git config --global user.name 'Heng-xiu'
+    - git config --global user.email 'r23456999@gmail.com'
+
+script:
+    - hexo generate
+
+after_success:
+    - mkdir .deploy
+    - cd .deploy
+    - git init
+    - git remote add origin $DEPLOY_REPO
+    - cp -r ../public/* .
+    - git add -A .
+    - git commit -m 'Site updated'
+    - git push --force --quiet origin master
