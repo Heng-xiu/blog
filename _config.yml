@@ -72,3 +72,9 @@ deploy:
   type: git
   repo: https://github.com/Heng-xiu/blog.git
   branch: gh-pages
+
+# admin -setting
+admin:
+  username: xiuxiu
+  password_hash: $2a$08$eE4HWMp1uNf3NYZ.GrtP8eRg5l2zv96/F9Jsddx9WPMF30EW2/IsO
+  secret: a secret something
