@@ -7,7 +7,7 @@ title: 咻咻的筆記小站
 subtitle:
 description: 所以我說那個ＳＥＯ呢...
 author: Heng-xiu Xu
-language:
+language: zh-TW
 timezone:
 
 # URL
@@ -102,6 +102,20 @@ image_minifier:
   optimizationLevel: 2
   pngquant: false
   progressive: false
+
+# hexo robots.txt
+robotstxt:
+    useragent: "*"
+    disallow:
+        - /js
+        - /css
+        - /fonts
+        - /vendors
+        - /fancybox
+    allow:
+        - /
+        - /archives
+    sitemap: /sitemap.xml
 
 # admin -setting
 # admin:
