@@ -73,6 +73,24 @@ deploy:
   repo: https://github.com/Heng-xiu/blog.git
   branch: gh-pages
 
+# hexo-all-minifier setting
+html_minifier:
+  enable: true
+  exclude:
+
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
 # admin -setting
 # admin:
 #   username: xiuxiu
